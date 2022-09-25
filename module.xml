@@ -8,7 +8,6 @@
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.maze.PKG"/>
       <UnitTest Name="/tests" Package="dc.maze.unittests" Phase="test"/>
-      <CSPApplication CookiePath="/csp/iris-maze/" DefaultTimeout="900" DeployPath="{cspdir}/csp/${namespace}/"  MatchRoles=":{$dbrole}" PasswordAuthEnabled="1" Recurse="1" ServeFiles="1" ServeFilesTimeout="3600" SourcePath="/src/dc/maze/csp" UnauthenticatedEnabled="0" Url="/csp/iris-maze" UseSessionCookie="2"/>
     </Module>
   </Document>
 </Export>
