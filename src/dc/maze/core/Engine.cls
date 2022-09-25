@@ -134,12 +134,13 @@ Method HasNextTurn() As %Boolean
   Quit $$$YES
 }
 
-Method EndMatch() As %Status
+Method EndMatch(maze as %String) As %Status
 {
   Set tSC = $$$OK
 	Try {
     Set match = ##class(dc.maze.core.Match).%New()
     Set match.Score = ..Score
+    Set match.Maze = maze
     For ix=1:1:..Steps.Count() {
       Do match.Steps.Insert(..Steps.GetAt(ix))
     }

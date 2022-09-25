@@ -27,7 +27,7 @@ ClassMethod Match(maze As %String = "easy") As %Status
       $$$TOE(tSC, ..Round(.strategy, .game))
     }
 
-    $$$TOE(tSC, game.EndMatch())
+    $$$TOE(tSC, game.EndMatch(maze))
 	} Catch tException {
 		Set:$$$ISOK(tSC) tSC = tException.AsStatus()
 	}
