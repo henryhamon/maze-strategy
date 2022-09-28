@@ -1,16 +1,37 @@
-## intersystems-objectscript-template
-This is a template for InterSystems ObjectScript Github repository.
-The template goes also with a few files which let you immedietly compile your ObjecScript files in InterSystems IRIS Community Edition in a docker container
+# Maze-strategy
+It is a programming-based game that played with your code!
+You control a bot that must to find an exit on a labirinthy.
+
+## How to play
+You must to write a method "GetNextTurn" on dc.maze.Strategy class.
+This method receives four boolean arguments (up, down, left, right). The arguments are either 1 (bot is next to a wall) or 0 (bot can move in that direction). The method must return one of the strings "up", "down", "left", right", signifying where the bot should move.
+
+### Test your strategy
+You have 2 labirinthies to pratice, one easy and another harder to solve.
+The method EasyMatch will prepare a 10x10 maze and play your strategy.
+
+```
+$ docker-compose exec iris iris session iris
+USER>Write ##class(dc.maze.Game).EasyMatch()
+```
+The method HardMatch will prepare a 45x20 maze and play your strategy.
+
+```
+$ docker-compose exec iris iris session iris
+USER>Write ##class(dc.maze.Game).HardMatch()
+```
+
+All matches are record on dc.maze.core.Match persistent class, you can see all the steps of your solution and the general score of the match.
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
-## Installation 
+## Installation
 
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/objectscript-docker-template.git
+$ git clone https://github.com/intersystems-community/maze-strategy
 ```
 
 Open the terminal in this directory and run:
