@@ -134,7 +134,7 @@ Method HasNextTurn() As %Boolean
   Quit $$$YES
 }
 
-Method EndMatch(maze as %String) As %Status
+Method EndMatch(maze As %String) As %Status
 {
   Set tSC = $$$OK
 	Try {
@@ -155,7 +155,7 @@ Method EndMatch(maze as %String) As %Status
 ClassMethod LoadEasyMaze() As %Status
 {
   Kill ^Map
-  Set ^Map("Score") = 150
+  Set ^Map("Score") = 300
   Set ^Map("StartX") = 1
   Set ^Map("StartY")  = 1
   Set ^Map(1 ) = "0^0^1^0^0^0^0^1^0^0"
@@ -174,7 +174,7 @@ ClassMethod LoadEasyMaze() As %Status
 ClassMethod LoadHardMaze()
 {
   Kill ^Map
-  Set ^Map("Score") = 600
+  Set ^Map("Score") = 1500
   Set ^Map("StartX") = 4
   Set ^Map("StartY")  = 4
   Set ^Map( 1) = "1^1^0^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1"
